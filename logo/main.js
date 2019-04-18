@@ -36,7 +36,8 @@ var initParticleSlider = function(){
     : psScript.onload = init);
   psScript.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/23500/ps-0.9.js';
 	psScript.setAttribute('type', 'text/javascript');
-  if(psScript != null)
+  var k = document.getElementById("particle-slider");
+	if(k != null)
   {
 	document.body.appendChild(psScript);
   }
