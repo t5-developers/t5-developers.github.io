@@ -39,7 +39,7 @@ var initParticleSlider = function(){
   var k = document.getElementById("particle-slider");
 	if(k != null)
   {
-	document.k.appendChild(psScript);
+	document.body.appendChild(psScript);
   }
 }
     
