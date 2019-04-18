@@ -26,7 +26,7 @@ var txt = [
 var docfrag = document.createDocumentFragment();
 
 function updateScreen() 
-var c = document.getElementById("console");
+{
   //Shuffle the "txt" array
   txt.push(txt.shift());
   //Rebuild document fragment
@@ -36,6 +36,7 @@ var c = document.getElementById("console");
     docfrag.appendChild(p);
   });
   //Clear DOM body
+  var c = document.getElementById("console");
   while (c.firstChild) {
     c.removeChild(c.firstChild);
   }
