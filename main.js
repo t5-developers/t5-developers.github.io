@@ -1,4 +1,4 @@
-var intervalID = window.setInterval(updateScreen, 200);
+var intervalID = window.setInterval(updateScreen, 500);
 
 var txt = [
   "T5 DEVELOPERS [Version 1.0.0.1] Last-Modified: Thu, 18 Apr 2019 10:01:57 GMT",
