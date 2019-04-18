@@ -1,5 +1,4 @@
-var intervalID = window.setInterval(updateScreen, 500);
-var c = document.getElementById("console");
+var intervalID = window.setInterval(updateScreen, 200);
 
 var txt = [
   "T5 DEVELOPERS [Version 1.0.0.1]",
@@ -25,8 +24,9 @@ var txt = [
 ]
 
 var docfrag = document.createDocumentFragment();
-
-function updateScreen() {
+var c;
+function updateScreen() 
+c = document.getElementById("console");
   //Shuffle the "txt" array
   txt.push(txt.shift());
   //Rebuild document fragment
