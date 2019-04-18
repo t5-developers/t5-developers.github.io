@@ -24,9 +24,9 @@ var txt = [
 ]
 
 var docfrag = document.createDocumentFragment();
-var c;
+
 function updateScreen() 
-c = document.getElementById("console");
+var c = document.getElementById("console");
   //Shuffle the "txt" array
   txt.push(txt.shift());
   //Rebuild document fragment
