@@ -1,24 +1,26 @@
-html,
-body {
-  background-color: black;
+html, body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-
-  .slides,
-  & > .dg {
-    display: none;
-  }
+  position: relative;
 }
 
-@media (min-width: 1000px) {
-  body {
-    background-repeat: no-repeat;
+body {
+   background: black;
+}
 
-    & > .dg {
-      display: block;
-    }
-  }
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+canvas#canvas-reference {
+  display: none;
+}
+
+img {
+  display: none;
 }
