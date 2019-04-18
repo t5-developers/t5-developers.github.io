@@ -14,7 +14,7 @@ var init = function(){
 var initParticleSlider = function(){
   var psScript = "<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/23500/ps-0.9.js' type='text/javascript'></script>";
 	console.log(psScript);
-  document.getElementsByTagName("body")[0].appendChild(psScript);
+  document.write(psScript);
 }
     
 (window.addEventListener
