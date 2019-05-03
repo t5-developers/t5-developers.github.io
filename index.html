@@ -51,13 +51,20 @@
     <!-- banner -->
     <div class="banner_mobilspvt he-codes">
         <div class="container-fluid">
-            <div class="banner-text pl-lg-5 pl-sm-4 ml-lg-3">
+            <div class="grid-container">
+
+            <div class="grid-item banner-text pl-lg-5 pl-sm-4 ml-lg-3">
                 <div class="logo-2">
                     <a href="index.html"><img src="images/t5.png"></span></a>
                 </div>
                 <h2>#Solutions_Delivered</h2>
                 <a href="about.html" class="btn button-style mt-5">Read More</a>
                 <a href="contact.html" class="btn button-style mt-5">Contact Us</a>
+            </div>
+            <div class="grid-item banner-text1">
+                <h4 class="typewriter">
+                    <span id="message"></span><span class="cursor"></span></h4>
+            </div>
             </div>
         </div>
 
@@ -82,5 +89,51 @@
     <!-- //banner -->
 
 </body>
+<script>
+    const mHTML = document.getElementById('message'),
+        messages = [
+            'Welcome to T5 Developers',
+            'We work on Development',
+            'We work on your Projects'
+        ];
+    let currentMessage = 0;
+    function typeMessage() {
+        if (!messages[currentMessage]) {
+            currentMessage = 0;
+        }
+        const currentStr = messages[currentMessage];
+        currentStr.split();
+        let part = '';
+        let currentLetter = 0;
+        let int1 = setInterval(()=>{
+            if (!currentStr[currentLetter]) {
+                currentMessage++;
+                setTimeout(()=>{
+                    deleteMessage(part);
+                }, 500);
+                clearInterval(int1);
+            } else {
+                part += currentStr[currentLetter++];
+                mHTML.innerHTML = part;
+            }
+        }, 100);
+    }
+    function deleteMessage(str) {
+        let int = setInterval(()=>{
+            if (str.length === 0) {
+                setTimeout(()=>{
+                    typeMessage();
+                }, 500);
+                clearInterval(int);
+            } else {
+                str = str.split('');
+                str.pop();
+                str = str.join('');
+                mHTML.innerHTML = str;
+            }
+        },50);
+    }
+    typeMessage();
+</script>
 
 </html>
