@@ -264,7 +264,7 @@ ul.submenu li a.active {
 
 @media (max-width: 767px) {
     .fullscreen-bg {
-        background-image: linear-gradient(#451584, #8f50e2);
+        background: url('../images/mbg.png') center center / cover no-repeat;
         
     }
 
